@@ -3,6 +3,10 @@ import Url from '../models/url.js';
 import * as shortid from 'shortid';
 const router = express.Router();
 
+router.get('/', (req, res) => {
+    res.send('Welcome to the URL Shortener API! Use /shorten to create short URLs.');
+});
+
 router.get('/details/:url', async (req, res) => {
     const { url } = req.params;
   
